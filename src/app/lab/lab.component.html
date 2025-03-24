@@ -1,4 +1,3 @@
-<p>lab works!</p>
 <!-- Button to Add a Section -->
 <button type="button" class="app-cmd-add-section" (click)="addSection()">Add Section</button>
 
@@ -8,9 +7,9 @@
 
     <div>
       <button type="button" class="app-cmd-add-input" (click)="addInput(i)">
-        <i class="material-symbols-outlined">add</i> Add Input
+        <i class="material-symbols-outlined"></i> Add Input
       </button>
-      <span class="section-number">Section {{ i + 1 }}</span>
+      <b><span class="section-number">Section {{ i + 1 }}</span></b>
       <button type="button" class="app-cmd-remove-section" (click)="removeSection(i)" [disabled]="sections.length === 1">
         Remove Section
       </button>

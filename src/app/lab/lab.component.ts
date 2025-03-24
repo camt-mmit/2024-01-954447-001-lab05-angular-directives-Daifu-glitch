@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-lab',
   imports: [CommonModule],
@@ -9,7 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 
 export class LabComponent {
-  sections: { inputs: number[] }[] = [{ inputs: [1] }];
+  sections: { inputs: number[] }[] = [{ inputs: [0] }];
 
   // Add a new section
   addSection(): void {
@@ -38,8 +39,17 @@ export class LabComponent {
   // Update the value of an input
   updateInputValue(sectionIndex: number, inputIndex: number, event: Event): void {
     const inputElement = event.target as HTMLInputElement;
-    this.sections[sectionIndex].inputs[inputIndex] = inputElement.valueAsNumber || 0;
-  }
+    this.sections = this.sections.map((section, secIdx) =>
+      secIdx === sectionIndex
+        ? {
+            ...section,
+            inputs: section.inputs.map((val, idx) =>
+              idx === inputIndex ? inputElement.valueAsNumber || 0 : val
+            ),
+          }
+        : section
+    );
+      }
 
   // Calculate the total sum for a section
   getSectionTotal(sectionIndex: number): number {

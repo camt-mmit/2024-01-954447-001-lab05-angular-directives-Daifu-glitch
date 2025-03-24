@@ -1,0 +1,43 @@
+/* สไตล์ของ Header */
+h1 {
+  text-align: center;
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* สไตล์ของ Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background: #007bff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* สไตล์ของ Link */
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+/* สีพื้นหลังเมื่อ hover */
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* สไตล์ของ Link ที่ Active */
+.app-st-active {
+  background: white;
+  color: #007bff !important;
+  border-radius: 5px;
+  padding: 8px 12px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+}

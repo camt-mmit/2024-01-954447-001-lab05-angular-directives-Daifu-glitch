@@ -1,0 +1,128 @@
+/* ปรับปุ่มให้ดูสวยงาม */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* ปรับปุ่มสำหรับเพิ่มและลบ */
+.app-cmd-add-section {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.app-cmd-remove-section {
+  background-color: #dc3545;
+}
+
+.app-cmd-remove-section:hover {
+  background-color: #b02a37;
+}
+
+.app-cmd-remove-input {
+  background-color: #ff5e5e;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+
+.app-cmd-remove-input:hover {
+  background-color: #e60000;
+}
+
+/* ปรับโครงสร้างของ Section */
+.app-sections-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.app-cmp-section {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #007bff;
+}
+
+.section-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* สีเทาเข้ม อ่านง่าย */
+}
+
+/* ปรับ layout ภายใน section */
+.app-cmp-section div {
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+}
+
+/* ปรับช่อง Input */
+.app-cmp-input {
+  display: flex;
+  align-items: center;
+  width: 100%; /* ให้ input แสดงเต็มความกว้างของ container */
+  gap: 10px;
+  background: #fff;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.app-elem-input {
+  flex-grow: 1; /* ให้ input ขยายเต็มพื้นที่ */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: right;
+}
+
+.app-elem-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* แสดงผลรวมของแต่ละ Section */
+.app-elem-result {
+  font-size: 16px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.app-cmp-inputs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* ระยะห่างระหว่าง input */
+  margin-top: 10px;
+}
+
+.app-cmd-remove-input {
+  background-color: #ff5e5e;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+
+.app-cmd-remove-input:hover {
+  background-color: #e60000;
+}
